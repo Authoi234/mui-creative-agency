@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const serviceImages = [
     'https://i.ibb.co/HNhykGp/iphone-1.png',
@@ -10,7 +11,7 @@ const serviceImages = [
 const Services = () => {
     return (
         <Box>
-            
+            <SectionTitle title={'Provide awesome'} colored={'Services'}></SectionTitle>
         </Box>
     );
 };
