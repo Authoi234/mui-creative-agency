@@ -1,9 +1,16 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
-const SectionTitle = () => {
+const SectionTitle = ({ title, colored }) => {
     return (
         <div>
-            
+            <Typography sx={{
+                fontSize: '34px',
+                fontWeight: 'bold'
+            }} >{title}{' '} {
+                colored && (
+                    <span style={{color: 'primary.green'}}>{colored}</span>
+                )}</Typography>
         </div>
     );
 };
