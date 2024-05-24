@@ -62,7 +62,9 @@ function Header(props) {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { sm: 'none' } }}
+                            sx={{ mr: 2, display: { sm: 'none' }, bgcolor: 'primary.main', '&:hover': {
+                                backgroundColor: 'primary.main'
+                            } }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -73,7 +75,7 @@ function Header(props) {
                         >
                             MUI
                         </Typography> */}
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }}}>
                             <img src="https://i.ibb.co/JsvBDwD/logo.png" alt="" style={{width: '150px'}} />
                         </Box>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
