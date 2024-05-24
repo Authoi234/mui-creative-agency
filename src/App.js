@@ -4,7 +4,7 @@ import { theme } from './theme/theme';
 import { CssBaseline } from '@mui/material';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import { Home } from '@mui/icons-material';
+import Home from './pages/Home/Home';
 
 function App() {
 
