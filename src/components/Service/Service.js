@@ -1,10 +1,20 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 
-const Service = ({image}) => {
+const Service = ({ image }) => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{
+            maxWidth: 345,
+            boxShadow: 'none',
+            '&:hover': {
+                boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)'
+            }
+        }}>
             <CardMedia
+                sx={{
+                    width: 'auto',
+                    mx: 'auto',
+                }}
                 component="img"
                 alt="green iguana"
                 height="140"
@@ -16,11 +26,10 @@ const Service = ({image}) => {
                 <Typography gutterBottom variant="h5" component="div" sx={{
                     fontWeight: 'bold'
                 }}>
-                Web & Mobile design
+                    Web & Mobile design
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                <Typography variant="h6" color="text.secondary">
+                    We craft stunning and amazing web UI, using a well drrafted UX to fit your product.
                 </Typography>
             </CardContent>
             <CardActions>
