@@ -14,10 +14,16 @@ const Services = () => {
         <Box>
             <SectionTitle title={'Provide awesome'} colored={'Services'}></SectionTitle>
 
-            <Grid container spacing={2}>
-                {serviceImages.map((image, i) => {
-                    <Service image={image} key={i}></Service>
-                })}
+            <Grid container spacing={2} sx={{ mt: 4 }}>
+                {
+                    serviceImages.map((image, i) => {
+                        return (
+                            <Grid item xs={12} sm={6} md={4} key={i}>
+                                <Service image={image} />
+                            </Grid>
+                        );
+                    })
+                }
             </Grid>
         </Box>
     );

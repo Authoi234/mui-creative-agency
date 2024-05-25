@@ -10,9 +10,13 @@ const Service = ({image}) => {
                 height="140"
                 image={image}
             />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+            <CardContent sx={{
+                textAlign: 'center'
+            }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{
+                    fontWeight: 'bold'
+                }}>
+                Web & Mobile design
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with over 6,000
