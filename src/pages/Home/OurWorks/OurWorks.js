@@ -4,10 +4,15 @@ import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const OurWorks = () => {
     return (
-        <Box>
+        <Box sx={{mt: 5}}>
             {/* Heading Section */}
             <Box>
-                <SectionTitle title={'Here are some of'} colored={'Our Works'}></SectionTitle>
+                <SectionTitle title={'Here are some of'} colored={'Our Works'} sx={{
+                    textAlign: 'left'
+                }} />
+                <Box>
+
+                </Box>
             </Box>
         </Box>
     );

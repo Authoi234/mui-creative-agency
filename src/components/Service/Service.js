@@ -32,10 +32,6 @@ const Service = ({ image }) => {
                     We craft stunning and amazing web UI, using a well drrafted UX to fit your product.
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-            </CardActions>
         </Card>
     );
 };

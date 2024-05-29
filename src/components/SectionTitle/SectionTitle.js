@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 
 const SectionTitle = ({ title, colored }) => {
@@ -9,9 +9,9 @@ const SectionTitle = ({ title, colored }) => {
                 fontWeight: 'bold',
                 textAlign: 'center'
             }} >{title}{' '} {
-                colored && (
-                    <span style={{color: '#7AB259'}}>{colored}</span>
-                )}</Typography>
+                    colored && (
+                        <span style={{ color: '#7AB259' }}>{colored}</span>
+                    )}</Typography>
         </div>
     );
 };
