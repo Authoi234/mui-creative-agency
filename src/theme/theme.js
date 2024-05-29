@@ -7,7 +7,7 @@ export const theme = createTheme({
             yellow: '#FBD062',
             green: '#7AB259'
         },
-    },
+    },  
     components: {
         MuiContainer: {
             defaultProps: {
