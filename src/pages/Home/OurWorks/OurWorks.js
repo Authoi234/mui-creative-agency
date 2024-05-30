@@ -46,10 +46,10 @@ const OurWorks = () => {
                         <Tab label="Mobile App" />
                     </Tabs>
                     <Box>
-                        <IconButton sx={{ border: '1px solid #959EAD', mr: 2 }} onClick={() => setValue(value - 1)} disable={value === 0}>
+                        <IconButton sx={{ border: theme => `1px solid ${value === 0 ? '#959EAD' : theme.palette.primary.main}}`, mr: 2 }} onClick={() => setValue(value - 1)} disable={value === 0}>
                             <ArrowBackIcon></ArrowBackIcon>
                         </IconButton>
-                        <IconButton sx={{ border: '1px solid #959EAD' }} onClick={() => setValue(value + 1)} disable={value === 2}>
+                        <IconButton sx={{ border: theme => `1px solid ${value === 0 ? '#959EAD' : theme.palette.primary.main}}` }} onClick={() => setValue(value + 1)} disable={value === 2}>
                             <ArrowBackIcon sx={{
                                 transform: 'rotate(180deg)'
                             }}></ArrowBackIcon>
