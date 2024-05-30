@@ -1,8 +1,9 @@
-import { Box, IconButton, Tab, Tabs } from '@mui/material';
+import { Box, Grid, IconButton, Tab, Tabs } from '@mui/material';
 import React from 'react';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
-import  ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CreativeCard from '../../../components/CreativeCard/CreativeCard';
+import { cardData } from './cardData';
 
 const OurWorks = () => {
 
@@ -37,7 +38,7 @@ const OurWorks = () => {
                             color: 'primary.green',
                         },
                         '& .MuiButtonBase-root': {
-                            textTransform:'capitalize',
+                            textTransform: 'capitalize',
                         },
                     }}>
                         <Tab label="All" />
@@ -45,10 +46,10 @@ const OurWorks = () => {
                         <Tab label="Mobile App" />
                     </Tabs>
                     <Box>
-                        <IconButton sx={{border: '1px solid #959EAD', mr: 2}} onClick={() => setValue(value - 1)} disable={value === 0}>
+                        <IconButton sx={{ border: '1px solid #959EAD', mr: 2 }} onClick={() => setValue(value - 1)} disable={value === 0}>
                             <ArrowBackIcon></ArrowBackIcon>
                         </IconButton>
-                        <IconButton sx={{border: '1px solid #959EAD'}} onClick={() => setValue(value + 1)}  disable={value === 2}>
+                        <IconButton sx={{ border: '1px solid #959EAD' }} onClick={() => setValue(value + 1)} disable={value === 2}>
                             <ArrowBackIcon sx={{
                                 transform: 'rotate(180deg)'
                             }}></ArrowBackIcon>
@@ -56,8 +57,18 @@ const OurWorks = () => {
                     </Box>
                 </Box>
             </Box>
+
             {/* Card Section */}
-            <CreativeCard></CreativeCard>
+
+            <Grid container spacing={3} justifyContent='center'>
+                {
+                    cardData[value].map(image => (
+                        <Grid item>
+                            <CreativeCard image={image}></CreativeCard>
+                        </Grid>
+                    ))
+                }
+            </Grid>
         </Box>
     );
 };
